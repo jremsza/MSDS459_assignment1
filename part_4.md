@@ -16,7 +16,7 @@ sampling algorithm and use the temperature parameter to adjust which word is cho
 
 - **Application of LLMs in Knowledge Retrieval**
 
-### References
+##### References
 
 
 Kirkovska, Anita. 2024. "Four LLM Hallucinations and Ways to Fix Them: What Is LLM Hallucination & the Four Most Common Hallucination Types and the Causes for Them." Vellum.ai. January 1, 2024. https://www.vellum.ai/blog/llm-hallucination-types-with-examples.
