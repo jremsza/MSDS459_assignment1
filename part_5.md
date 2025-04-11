@@ -25,9 +25,10 @@ The process of knowleadge extract involves 4 main steps:
  Coreference resolution identifies all mentions of the same noun in a sentence, helping to consolidate references to the same entity. This prevents redundancy in a knowledge graph and reduces the risk of introducing incorrect relationships.
 
  - **Relation extraction**
- Sentence can contain several relations, too that need to be extracted. The two main ways in NLP to perform relation extraction is dependency parsing and constituency parsing. Dependency parsing uses tree data structures to give the model a representation of the logic and grammar of a sentence and illistrates the relationships between words. Constituency parsing aims to parse a sentence into a series of sub constituents. Its approach is more top down, trying to iteratively break constituents into smaller units and relationships between them.
+ 
+ Sentence can contain several relations as well that need to be extracted. The two main ways in NLP to perform relation extraction is dependency parsing and constituency parsing. Dependency parsing uses tree data structures to give the model a representation of the logic and grammar of a sentence and illistrates the relationships between words. Constituency parsing aims to parse a sentence into a series of sub constituents. Its approach is more top down, trying to iteratively break constituents into smaller units and relationships between them.
 
- extract relations out of the text is to look for all subject–verb–object triplets using. this is done using the spaCy package with the Matcher method for POS tag sequence patterns.
+To extract relations from text, we identify subject-verb-object triplets using the spaCy package's Matcher method, which recognizes patterns of part-of-speech (POS) tags in sequences.
 
 #### Semantic Structure Analysis
 
@@ -37,7 +38,7 @@ If you do a web search for sentence segmenters, you’re likely to be pointed to
 
 A web search for sentence segmenters gives mixed results. Some are browser based hybrid AI regex model (crimson.ai 2025) and there are others that give strictly ML such as the huggingface segment any text model 
 
-SpaCy Python library offers convenient tools for sentence segmentation, and its accuracy largely stems from its use of dependency parsing. Dependency parsing identifies the grammatical relationships between words in a sentence enabling spaCy to handle ambiguous punctuation and capitalization more reliably. When combined with token embeddings, this structure enhances the precision of segmentation, even in complex or informal text. However, there is a tradeoff between speed and accuracy. The regex method is very fast but not accurate, and the spaCy method is much slower but way more accurate.
+SpaCy Python library offers convenient tools for sentence segmentation, and its accuracy largely stems from its use of dependency parsing. Dependency parsing identifies the grammatical relationships between words in a sentence enabling spaCy to handle ambiguous punctuation and capitalization more reliably. When combined with token embeddings, this structure enhances the precision of segmentation, even in complex or informal text. However, there is a tradeoff between speed and accuracy. The regex method is very fast but not accurate, and the spaCy method is much slower but much more accurate.
 
 The text recomends using MiniML for text embedding. MiniLM is a compact, high-performance distilled BERT model that balances accuracy and speed. In sentence segmentation pipelines, MiniLM is used to encode each sentence's meaning into vector form. This allows for more intelligent splitting, filtering, and downstream processing — especially when extracting knowledge or performing retrieval based on semantic similarity, not just surface features. (serach web for MiniML info)
 
