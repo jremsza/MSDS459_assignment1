@@ -19,10 +19,10 @@ To filter chatbot outputs effectively, a binary classifier is needed to distingu
 
 Below is a list of open source tools to use to help with general filter rules, using languages similar to regular expressions:
 
-SpaCy’s Matcher class
-Regular expressions for language models (ReLM) patterns
-EleutherAI’s LM Evaluation Harness package
-NeMo Guardrails’s Colang language
+- SpaCy’s Matcher class
+- Regular expressions for language models (ReLM) patterns
+- EleutherAI’s LM Evaluation Harness package
+- NeMo Guardrails’s Colang language
 
 The text walks through an example of RAG using GPT-2. Using Retrieval-Augmented Generation (RAG) with GPT-2 involves fine-tuning the model on custom datasets to generate contextually relevant text by integrating retrieved external information with its language capabilities (in the text example they use the book chapter to train with). Training GPT-2 with your own data adjusts its weights to better suit specific domains, enhancing its ability to produce tailored responses. However, GPT-2’s default greedy search generation, which selects the most probable token at each step, can lead to repetitive outputs, as it prioritizes immediate choices without long-term planning. For example, selecting a word like "data" may increase its likelihood in subsequent steps, causing loops. To address this, techniques like repetition penalties and temperature adjustments are used. Increasing the temperature above 1.0 reduces greediness, fostering creativity, while penalties help break repetitive cycles, ensuring more coherent and diverse outputs when combined with custom-trained, retrieval-augmented approaches. 
 
