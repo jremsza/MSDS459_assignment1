@@ -1,10 +1,10 @@
 ## Part 5: Natural Language Processing in Action - Chapter 11
 
-This chapter discusses knowleadge graphs and information retrivial with the goal. The authors definition of a knowleadge graph is a flexible data structure designed to store knowledge. This allows for the model to extract meaningful information about a topic to essentially understand what it reads (Lane and Dyshel 2025). Below is a summary from the main topics in the text.  
+This chapter discusses knowledge graphs and information retrieval with the goal. The authors definition of a knowledge graph is a flexible data structure designed to store knowledge. This allows for the model to extract meaningful information about a topic to essentially understand what it reads (Lane and Dyshel 2025). Below is a summary from the main topics in the text.  
 
 #### Information Extraction from Natural Language
 
-At a high level, the way that the model can extract facts from the text is by parsing the text into entities and discovering the relations between them. A graph data structure is an appropriate data store for the knowledge graph, also called knowledge database. The nodes in the graph would are the entities, and the the edges represent the relations between entities. 
+At a high level, the way that the model can extract facts from the text is by parsing the text into entities and discovering the relations between them. A graph data structure is an appropriate data store for the knowledge graph, also called knowledge database. The nodes in the graph would are the entities, and the edges represent the relations between entities. 
 
 Bridging the commonsense gap in LLMs requires integrating knowledge graphs and symbolic reasoning. This "missing link" in NLP enables grounding — anchoring model outputs in real-world knowledge — and brings us closer to building truly intelligent AI systems. The most important algorithm in this grounding process is knowledge extraction.
 
@@ -32,7 +32,7 @@ To extract relations from text, we identify subject-verb-object triplets using t
 
 #### Semantic Structure Analysis
 
-Document chunking is a prerequisite for knowledge extraction, helping convert unstructured text into semistructured segments that are easier to search and extract facts from — a necessary step in building knowledge bases like NELL or Freebase. Sentence segmentation is the most common form of chuncking and is the first step in the knowledge extraction pipeline. Sentence segmentation is done using regex or ML algothrims wiht the latter being the perferred method.
+Document chunking is a prerequisite for knowledge extraction, helping convert unstructured text into semistructured segments that are easier to search and extract facts from — a necessary step in building knowledge bases like NELL or Freebase. Sentence segmentation is the most common form of chunking and is the first step in the knowledge extraction pipeline. Sentence segmentation is done using regex or ML algorithms with the latter being the preferred method.
 
 If you do a web search for sentence segmenters, you’re likely to be pointed to various regular expressions intended to capture the most common sentence boundaries.
 
@@ -40,19 +40,18 @@ A web search for sentence segmenters gives mixed results. Some are browser based
 
 SpaCy Python library offers convenient tools for sentence segmentation, and its accuracy largely stems from its use of dependency parsing. Dependency parsing identifies the grammatical relationships between words in a sentence enabling spaCy to handle ambiguous punctuation and capitalization more reliably. When combined with token embeddings, this structure enhances the precision of segmentation, even in complex or informal text. However, there is a tradeoff between speed and accuracy. The regex method is very fast but not accurate, and the spaCy method is much slower but much more accurate.
 
-The text recomends using MiniML for text embedding. MiniLM is a compact, high-performance distilled BERT model that balances accuracy and speed. In sentence segmentation pipelines, MiniLM is used to encode each sentence's meaning into vector form. This allows for more intelligent splitting, filtering, and downstream processing — especially when extracting knowledge or performing retrieval based on semantic similarity, not just surface features. (serach web for MiniML info)
+The text recommends using MiniML for text embedding. MiniLM is a compact, high-performance distilled BERT model that balances accuracy and speed. In sentence segmentation pipelines, MiniLM is used to encode each sentence's meaning into vector form. This allows for more intelligent splitting, filtering, and downstream processing — especially when extracting knowledge or performing retrieval based on semantic similarity, not just surface features. 
 
 #### Building Knowledge Graphs
 
 Knowledge triples represent isolated facts using the structure: entity–relation–value (e.g., "Einstein–has-profession–physicist"). The NELL system by Carnegie Mellon focuses on extracting "kind-of" relationships and normalizes text by lowercasing and removing punctuation, using underscores for multi-word names. Each triple captures a factual relationship, where the relation (often a verb phrase like is or has) links an entity to a value, both of which are named entities.
 
-Knowledge retrival in a graph database is done using SPARQL, Cypher, and AQL quary langauges. SPARQL is open source and not desginated for a specfic graph database so that is the focus of this text. A quick internet search about SPARQL sheds light on the recomended data base titled GraphDB. The website states "SPARQL is a SQL-like query language for RDF data. SPARQL queries can produce result sets that are tabular or RDF graphs depending on the kind of query used" (Ontotext 2023). Further more the website gives better guidance to written quaries in a general form:
+Knowledge retrieval in a graph database is done using SPARQL, Cypher, and AQL query languages. SPARQL is open source and is the focus of the textbook. A quick internet search about SPARQL sheds light on the recommended database titled GraphDB. The website states "SPARQL is a SQL-like query language for RDF data. SPARQL queries can produce result sets that are tabular or RDF graphs depending on the kind of query used" (Ontotext 2023). Furthermore the website gives better guidance to written queries in a general form:
 
-First, define prefixes to URIs with the PREFIX keyword. In the example below, we set bedrock as the default namespace for the query.
+- Define prefixes to URIs with the PREFIX keyword. In the example below, we set bedrock as the default namespace for the query.
+- Use INSERT DATA to signify you want to insert statements. Write the subject predicate object statements.
+- Execute the query
 
-Next, use INSERT DATA to signify you want to insert statements. Write the subject predicate object statements.
-
-Finally, execute this query
 
 ##### References
 
