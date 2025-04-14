@@ -1,8 +1,8 @@
-## Part 2: Summary of Knowledge Graphs - Chapters 3 & 5
+# Part 2: Summary of Knowledge Graphs Textbook - Chapters 3 & 5
 
 Chpater 3 and 5 focus on Knowledge graph construction. Chapter 3 zeros in on domain discovery. It is one thing to find topics on a certain domain but the key to building suitable knowleadge bases is finding relavent domain topics.
 
-#### Crawlers
+## Crawlers
 
 **Focused crawlers** - Crawling refers to a set of techniques primarily used for domain discovery. A crawler is a specialized program that navigates the web and collects a corpus of data by following predefined criteria that is user or domain specific. 
 Four issues must be addressed before designing a focused crawler.
@@ -19,7 +19,7 @@ Another type of focused crawler is the semantic crawler. This type uses term tax
 
 Learning crawlers employ supervised machine learning to identify web pages relevant to user interests. They function by training classifiers on labeled datasets where users have marked pages as relevant or irrelevant. During crawling, these classifiers evaluate each new page and assign priority levels. Research demonstrates that combining page content analysis with link context produces superior results compared to either method independently.
 
-#### Domain Discovery Tool
+## Domain Discovery Tool
  
  The Domain Discovery Tool (DDT) is an interactive system designed to help users explore and understand specific topics or domains as they appear on the web. Users analyze web pages from search engines or crawlers, give feedback on their relevance, and use this feedback to train classifiers for identifying relevant content.
 
@@ -28,13 +28,13 @@ Learning crawlers employ supervised machine learning to identify web pages relev
 https://domain-discovery-tool.readthedocs.io/en/latest/
 https://github.com/ViDA-NYU/domain_discovery_tool
 
-### Chapter 5: Web Information Extraction:
+## Chapter 5: Web Information Extraction:
 
 Chapter 3 was concerned with finding relevant domain specfic sources but chapter 5 focuses on extracting that information from those sources.
 
 Challenges arise when performing web information extraction due to factors such as inconsistent web source structure, the need for automation at scale, and the high volume and velocity of web content. These elements can complicate data parsing, increase the likelihood of extraction errors, and demand robust systems that can adapt to dynamic web environments.
 
-#### Wrappers 
+## Wrappers 
 
 One way to deal with these challenges is to use a wrapper. A wrapper is designed to extract structured data from semi-structured sources like HTML web pages. Wrappers serve as the interface between a web data source and a downstream application, converting the loosely structured content into a machine-readable format such as JSON, XML, or CSV. The key function of a wrapper is to identify, locate, and extract specific pieces of information from a page—such as product names, prices, publication dates, or article titles—based on patterns, layout, or structure. Different types of wrappers are needed for different structured web pages the three outline in the text are:
 1.) Manual Wrappers (Rule-Based) - Hand-coded scripts that rely on hardcoded rules.
@@ -46,7 +46,7 @@ The text examines web information extraction (web IE) systems and their comparat
 I found an interesting paper that takes wrappers and scales them to the web rather than just a website. The paper _Automatic Wrappers for Large Scale Web Extraction_ focuses on developing automated techniques for creating wrappers from web pages at scale. It proposes methods to generate wrappers without manual intervention by leveraging patterns in web page structures, such as HTML tags and DOM trees, to identify and extract relevant information. The authors emphasize improving accuracy and scalability, addressing challenges like handling diverse website layouts and dynamic content. Their approach demonstrates effectiveness in large-scale experiments, achieving high precision and recall compared to traditional manual or semi-automated wrapper induction methods (Davli, Kumar, Soliman 2011).
 
 
-##### References 
+#### References 
 
 Dalvi, Nilesh, Ravi Kumar, and Mohamed A. Soliman. "Automatic Wrappers for Large Scale Web Extraction." Proceedings of the VLDB Endowment 4, no. 4 (2011): 219-230.
 
