@@ -11,7 +11,7 @@ Four issues must be addressed before designing a focused crawler.
 3.) How do we use the content of the web pages to determine relevance?
 4.) What kinds of user interactions are permitted when performing domain discovery?
 
-The overall goal is to keep the downlaoded webpages for processing at a minimum while maximizing the relavnt webpages processed. Using good seed pages is a way to ensure webpages are relavent. General elements needed when designing a crawler include: input mechanism, page retrival, content processing, priority assignment, and expansion. Best-First crawlers use term frequency vectors for computing topic relevance. 
+The overall goal is to keep the downlaoded webpages for processing at a minimum while maximizing the relavent webpages processed. Using good seed pages is a way to ensure webpages are relavent. General elements needed when designing a crawler include: input mechanism, page retrival, content processing, priority assignment, and expansion. Best-First crawlers use term frequency vectors for computing topic relevance. 
 
 Another type of focused crawler is the semantic crawler. This type uses term taxonomies or ontologies to deviate from solely reling on lexical matching like tf. The appraoch is to retrieve all terms that are conceptually similar to the topic terms in the ontology and use the additional terms to supplement the topic description.
 
