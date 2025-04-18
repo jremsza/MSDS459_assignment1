@@ -10,6 +10,7 @@ A summary of the assigned readings from the Knowledge Graphs textbook for week 2
 
 **Part 3.** 
 A summary of the assigned readings from the Knowledge Graphs textbook for week 3. This summary covers the topics: named entity recognition (NRE), challenges in information extraction (IE), techniques for NER, and evaluation of IE.
+
 **Part 4.** 
 A summary of the assigned readings from the Natural Language Processing in Action for week 1. This summary covers the topics: ethics and control in LLM usage, customization and fine-tuning of LLMs, and application of LLMs in knowledge retrieval.
 
