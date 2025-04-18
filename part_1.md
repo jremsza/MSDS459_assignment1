@@ -2,7 +2,7 @@
 
 Chapter 1 and 2 present the fundamentals of knowledge graphs. Chapter 1 introduces graph theroy and knowleadge graphs and chapter 2 walks through knowledge graph modeling and representation.
 
-## Knowledge Graphs
+### Knowledge Graphs
 
 Graph theory studies the properties and relationships of graphs, which are structures made up of nodes (vertices) connected by edges. It originated as a formal study with mathematicians like Euler, who used graphs to solve problems like the Seven Bridges of Konigsberg, focusing on the connections between objects rather than their physical properties.
 
@@ -18,7 +18,7 @@ Knowledge graphs are deployed in a number of industries such as scientific publi
 
  A blog titled _Why You Need a Knowledge Graph, And How to Build It_ goes deeper on Knowledge graphs giving examples of there applications of fraud detection, supply chain and healthcare case managment. In addition, the author lays out a solid case for when to drop relational database for graph databases. Relational databases face significant challenges when managing networks of events, people, and resources, as their performance degrades exponentially with larger network sizes, creating difficulties for SQL analysts. In contrast, graph databases offer a more efficient solution, maintaining relatively linear performance regardless of network complexity, making them ideal for handling intricate, interconnected data. Looking ahead, enterprise data groups are likely to adopt a hybrid strategy, leveraging relational databases for isolated, function-specific analysis while employing knowledge graphs to manage complex processes that span multiple areas of a business (Pugsley 2023).
 
-## Knowledge Graph Modeling
+### Knowledge Graph Modeling
 
 The most important aspect of knowledge graph modeling is the triple. The triple is standardized structure for representing relationships between entities. As the name implies their are 3 parts, subject: The entity or thing being described, predicate, the relationship connecting the subject to the object and object, the entity related to the subject through the predicate.
 
@@ -34,7 +34,7 @@ A comparison of the two data models is highlighted in the article _Property Grap
 The aim of this model is to build a cental, multilingual knowledge graph to record the structured data of Wikipedia articles. This model is a way to structure and organize knowledge, making it easy for computers to understand and connect information to mitigate the need for volunteers to maintain the data.
 The Wikidata model uses items to represent entities with each identifier. These items are connected through properties, which are relationships like "is an instance of" or "was born in." This creates a network where everything is interconnected.
 
-## Semantic Web Architecture
+### Semantic Web Architecture
 
 The Semantic Web is about transforming the web from a collection of documents meant for human consumption into a web of data that computers can understand, reason with, and act upon. The architecture of the semantic web can be thought of as a layered cake.  RDF provides the base and extensions such as RDFS and OWL enable increasingly complex modeling. This hierarchical structure spans from basic elements (URIs and Unicode) at the bottom to user-facing applications at the top. The middle layers contain critical components for querying, ontological modeling, and rule-based reasoning. The architecture also addresses important considerations like data provenance and trust, as verifying the accuracy and reliability of knowledge remains an ongoing research challenge in knowledge graph systems. 
 

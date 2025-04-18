@@ -2,7 +2,7 @@
 
 This chapter discusses knowledge graphs and information retrieval with the goal. The authors definition of a knowledge graph is a flexible data structure designed to store knowledge. This allows for the model to extract meaningful information about a topic to essentially understand what it reads (Lane and Dyshel 2025). Below is a summary from the main topics in the text.  
 
-## Information Extraction from Natural Language
+### Information Extraction from Natural Language
 
 At a high level, the way that the model can extract facts from the text is by parsing the text into entities and discovering the relations between them. A graph data structure is an appropriate data store for the knowledge graph, also called knowledge database. The nodes in the graph would are the entities, and the edges represent the relations between entities. 
 
@@ -30,7 +30,7 @@ The process of knowleadge extract involves 4 main steps:
 
 To extract relations from text, we identify subject-verb-object triplets using the spaCy package's Matcher method, which recognizes patterns of part-of-speech (POS) tags in sequences.
 
-## Semantic Structure Analysis
+### Semantic Structure Analysis
 
 Document chunking is a prerequisite for knowledge extraction, helping convert unstructured text into semistructured segments that are easier to search and extract facts from — a necessary step in building knowledge bases like NELL or Freebase. Sentence segmentation is the most common form of chunking and is the first step in the knowledge extraction pipeline. Sentence segmentation is done using regex or ML algorithms with the latter being the preferred method.
 
@@ -42,7 +42,7 @@ SpaCy Python library offers convenient tools for sentence segmentation, and its 
 
 The text recommends using MiniML for text embedding. MiniLM is a compact, high-performance distilled BERT model that balances accuracy and speed. In sentence segmentation pipelines, MiniLM is used to encode each sentence's meaning into vector form. This allows for more intelligent splitting, filtering, and downstream processing — especially when extracting knowledge or performing retrieval based on semantic similarity, not just surface features. 
 
-## Building Knowledge Graphs
+### Building Knowledge Graphs
 
 Knowledge triples represent isolated facts using the structure: entity–relation–value (e.g., "Einstein–has-profession–physicist"). The NELL system by Carnegie Mellon focuses on extracting "kind-of" relationships and normalizes text by lowercasing and removing punctuation, using underscores for multi-word names. Each triple captures a factual relationship, where the relation (often a verb phrase like is or has) links an entity to a value, both of which are named entities.
 

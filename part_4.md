@@ -2,7 +2,7 @@
 
 The focus of chapter 10 is about large language models (LLMs) and how they work that spands from ethics and usage to custom user applications.
 
-## Ethics and Control in LLM Usage
+### Ethics and Control in LLM Usage
 
 Popular LLM chatbots appear to be intelligent as they demonstrate their abilities with carrying out complex instructions to user inputs such as composing essays, code or even lines of argument for debates. However, these models have been trained on billions of parameters of data for lengthy periods of time. What is actually occurring is the machines are identifying word sequences it has seen before and repeating back a pattern of mashed up words that look like reasonable answers to questions that have been posed online. However intelligent these models seem to be, they often give false information that are known as "hallucinations". In a blog post on vellum.ai, author Anita Kirkovska outlines the four types of LLM hallucinations as input-conflicting, context-conflicting, fact-conflicting, and forced. The first, input-conflicting, is a hallucination in which the generated content deviates from the input often due to misunderstanding the users intent. Context-conflicting arises when the model generates content that conflicts with previously generated information, usually as a result of lengthy conversations in which the model loses track. Fact-conflicting is a hallucination in which the model is just factually incorrect. Lastly, forced hallucinations can happen in a situations when external users try to break the system prompt configuration of your deployed prompt by using jail-break techniques (Kirkovska 2024).
 
@@ -10,7 +10,7 @@ Given the numerous applications of LLMs it is often necessary to control for rea
 
 Under the hood LLMs operate on as a probability distribution function. During the training process the input text allows the model to learn how often each word occurs based on the words that preceded it. The training process compresses these statistics into a function that generalizes from these word-occurrence patterns, so it can fill in the blanks for new prompts and input text.
 
-## Customization and Fine-Tuning of LLMs
+### Customization and Fine-Tuning of LLMs
 
 Customizing and fine-tuning LLMs involves semantic routing, leveraging semantic search to direct user prompts to the most suitable LLM based on a trained model using successful prompt data. This enhances search results and efficiency. However, relying solely on LLMs for routing can be unreliable, leading to the complex field of prompt engineering to navigate each LLM's unique guardrails and quirks. Semantic chain-of-thought reasoning automates some prompt engineering for code generation. To prevent LLMs from producing toxic or erroneous outputs—like biases, violence, or privacy breaches—NLP filters and classifiers are essential. These require training with examples of good and bad text, a process as challenging as detecting human-generated toxic content, necessitating traditional machine learning approaches. 
 
@@ -25,7 +25,7 @@ Below is a list of open source tools to use to help with general filter rules, u
 
 The text walks through an example of RAG using GPT-2. Using Retrieval-Augmented Generation (RAG) with GPT-2 involves fine-tuning the model on custom datasets to generate contextually relevant text by integrating retrieved external information with its language capabilities (in the text example they use the book chapter to train with). Training GPT-2 with your own data adjusts its weights to better suit specific domains, enhancing its ability to produce tailored responses. However, GPT-2’s default greedy search generation, which selects the most probable token at each step, can lead to repetitive outputs, as it prioritizes immediate choices without long-term planning. For example, selecting a word like "data" may increase its likelihood in subsequent steps, causing loops. To address this, techniques like repetition penalties and temperature adjustments are used. Increasing the temperature above 1.0 reduces greediness, fostering creativity, while penalties help break repetitive cycles, ensuring more coherent and diverse outputs when combined with custom-trained, retrieval-augmented approaches. 
 
-## Application of LLMs in Knowledge Retrieval
+### Application of LLMs in Knowledge Retrieval
 
 A QA pipeline for RAG requires: a model to create text embeddings, an Approximate Nearest Neighbors (ANN) library for indexing documents and retrieving ranked matches, and a model to extract or generate answers from relevant documents. Frameworks like Jina, Haystack, txtai, and LlamaIndex simplify building, evaluating, and scaling such pipelines. LlamaIndex offers plugins for databases, vector stores, and LLMs, while Haystack combines LLMs, guardrails, and vector search to create robust QA RAG systems, ensuring accurate and safe responses in custom-trained, retrieval-augmented applications.
 

@@ -8,7 +8,7 @@ NER is a KG construction problem (KGC): It builds the initial structure of the k
 Instance matching is a KG completion problem: It refines and enhances the graph by linking different mentions that refer to the same real-world entity. This ensures the graph is accurate and complete, like making sure all puzzle pieces that belong together are connected.
 Both tasks are essential for creating a high-quality knowledge graph, which can be used in applications like semantic search, recommendation systems, or data integration.
 
-## Challenges in Information Extraction (IE)
+### Challenges in Information Extraction (IE)
 
 The text outlines several factors:
 - IE is nontrivial due to the complexity and ambiguity of natural language - many different ways to say the same thing
@@ -16,7 +16,7 @@ The text outlines several factors:
 - Ontology changes due to noval concepts - becomes more fine-grained. Causes a need for the entity typing mechanism to be retrained 
 - Supervised and ontologically mediated NER use labeled data and ontologies and outperform Open Information Extraction (Open IE) and unsupervised NER, which rely on fewer resources. However, unsupervised NER has improved significantly over the past decade due to advancements in language models and self-supervised learning.
 
-## Techniques for Named Entity Recognition
+### Techniques for Named Entity Recognition
 
 - **Supervised**
  Decision trees, maximum entropy models, HMMs, SVMs, and CRFs are all used for NER, most of these are sequence-labeling techniques that don't rely on the independent and identically distributed (i.i.d.) assumption common in many machine learning methods. The text illustrates why this matters: when classifying words in a sentence as entities (like locations or persons), considering words independently is flawed because context matters—for example, the word "the" is more likely to be followed by a location than not. Although classifying entire sequences jointly becomes computationally intractable for longer texts, models like HMMs and CRFs can account for dependencies between tokens without making strong independence assumptions
@@ -35,7 +35,7 @@ Deep learning approaches for Named Entity Recognition (NER) have gained signific
 
 RNN-LSTM approaches to NER often employ character-based architectures that model sentences as sequences of chracters rather than just words. This character-level NER methodology processes character sequences through highway networks over CNNs, followed by LSTM layers and softmax classifiers for final entity predictions. By analyzing text at the character level, these models achieve a finer-grained understanding of linguistic patterns than traditional word-level architectures, allowing them to better handle out-of-vocabulary words, morphological variations, and subword patterns critical for entity recognition.
  
-## Evaluation of Information Extraction
+### Evaluation of Information Extraction
 
 It is nessecary to evaluate the performance of information extraction systems. Perscision and recall are metrics that are used for this purpose. 
 **Precision** - measure of _correctness_ but taking the number of correct positives over the sum of correct and incorrect positives identified by the system (true positives + false positives).
