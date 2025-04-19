@@ -9,10 +9,10 @@ Chpater 3 and 5 focus on Knowledge graph construction. Chapter 3 zeros in on dom
 Crawling refers to a set of techniques primarily used for domain discovery. A crawler is a specialized program that navigates the web and collects a corpus of data by following predefined criteria that is user or domain specific. 
 Four issues must be addressed before designing a focused crawler.
 
-1.) How do we specify the domain to begin with?
-2.) How do we explore the link structure of the web to discover relevant pages? 
-3.) How do we use the content of the web pages to determine relevance?
-4.) What kinds of user interactions are permitted when performing domain discovery?
+1.) How do we specify the domain to begin with?<br>
+2.) How do we explore the link structure of the web to discover relevant pages?<br>
+3.) How do we use the content of the web pages to determine relevance?<br>
+4.) What kinds of user interactions are permitted when performing domain discovery?<br>
 
 The overall goal is to keep the downlaoded webpages for processing at a minimum while maximizing the relavent webpages processed. Using good seed pages is a way to ensure webpages are relavent. General elements needed when designing a crawler include: input mechanism, page retrival, content processing, priority assignment, and expansion. Best-First crawlers use term frequency vectors for computing topic relevance. 
 
