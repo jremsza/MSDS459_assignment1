@@ -4,8 +4,11 @@ Chpater 3 and 5 focus on Knowledge graph construction. Chapter 3 zeros in on dom
 
 ### Crawlers
 
-**Focused crawlers** - Crawling refers to a set of techniques primarily used for domain discovery. A crawler is a specialized program that navigates the web and collects a corpus of data by following predefined criteria that is user or domain specific. 
+- **Focused crawlers** 
+
+Crawling refers to a set of techniques primarily used for domain discovery. A crawler is a specialized program that navigates the web and collects a corpus of data by following predefined criteria that is user or domain specific. 
 Four issues must be addressed before designing a focused crawler.
+
 1.) How do we specify the domain to begin with?
 2.) How do we explore the link structure of the web to discover relevant pages? 
 3.) How do we use the content of the web pages to determine relevance?
@@ -15,7 +18,7 @@ The overall goal is to keep the downlaoded webpages for processing at a minimum 
 
 Another type of focused crawler is the semantic crawler. This type uses term taxonomies or ontologies to deviate from solely reling on lexical matching like tf. The appraoch is to retrieve all terms that are conceptually similar to the topic terms in the ontology and use the additional terms to supplement the topic description.
 
-**Inteligent crawlers** - 
+- **Inteligent crawlers** 
 
 Learning crawlers employ supervised machine learning to identify web pages relevant to user interests. They function by training classifiers on labeled datasets where users have marked pages as relevant or irrelevant. During crawling, these classifiers evaluate each new page and assign priority levels. Research demonstrates that combining page content analysis with link context produces superior results compared to either method independently.
 
@@ -26,6 +29,7 @@ Learning crawlers employ supervised machine learning to identify web pages relev
  A web search for domain discovery tool yielded a landing page that walks users through a DDT tool built by NYU scholars. Further investigation points to a GitHub repo for the tool and how to use it. What is unclear is if this the tool or a tool for DDT. Further review in the web serach did not clarify this as the other hits were not realated.
 
 https://domain-discovery-tool.readthedocs.io/en/latest/
+
 https://github.com/ViDA-NYU/domain_discovery_tool
 
 ## Chapter 5: Web Information Extraction:

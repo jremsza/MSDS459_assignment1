@@ -19,6 +19,7 @@ The text outlines several factors:
 ### Techniques for Named Entity Recognition
 
 - **Supervised**
+
  Decision trees, maximum entropy models, HMMs, SVMs, and CRFs are all used for NER, most of these are sequence-labeling techniques that don't rely on the independent and identically distributed (i.i.d.) assumption common in many machine learning methods. The text illustrates why this matters: when classifying words in a sentence as entities (like locations or persons), considering words independently is flawed because context matters—for example, the word "the" is more likely to be followed by a location than not. Although classifying entire sequences jointly becomes computationally intractable for longer texts, models like HMMs and CRFs can account for dependencies between tokens without making strong independence assumptions
 
 CRFs stand out as an appropriate model for NER with their ability to incorporate features from words before and after the target word. For instance, a CRF can use the word three positions earlier or the POS tags of words within a certain window as features. Unlike models that classify each word in isolation, CRFs excel by considering contextual relationships between words in a sequence. This is crucial for NER tasks where, for example, recognizing "United States" as a location entity requires understanding the relationship between adjacent words.
@@ -40,7 +41,7 @@ RNN-LSTM approaches to NER often employ character-based architectures that model
 It is nessecary to evaluate the performance of information extraction systems. Perscision and recall are metrics that are used for this purpose. 
 **Precision** - measure of _correctness_ but taking the number of correct positives over the sum of correct and incorrect positives identified by the system (true positives + false positives).
 
-**Recall**- measure of _completeness_ but taking the number of correct positives over the sum of true positives and false negitives identified by the system.
+**Recall** - measure of _completeness_ but taking the number of correct positives over the sum of true positives and false negitives identified by the system.
 
 Further examination may be needed to decide which metric is of best interets based on the application. In medical diagnosis systems, high recall is typically preferred to identify as many disease cases as possible, accepting some false positives in exchange for comprehensive detection. Conversely, financial fraud detection systems often emphasize precision to minimize false positives that could inconvenience legitimate customers through wrongly declined transactions (Huilgol 2024).
 
